@@ -1,23 +1,26 @@
 <html>
     <head>
-        <title> INSERIR MARCA </title>
-        
+        <title> INSERIR ESTADO </title>
+
     </head>
     <body>
-        <form>
-            First name:<br>
-            <input type="text" name="firstname"><br>
-            Last name:<br>
-        <input type="text" name="lastname">
-        </form>
-        
-        <?php
+        <center>
+            <?php
             include 'conn.php';
-        
-        
-        ?>
+
+            echo $_POST["nomeMarca"];
+
+            $sql = "INSERT INTO `banco_utfpr`.`marca` (`nomeMarca`) VALUES ('".$_POST["nomeMarca"]."');";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "Gravação de Marca Realizada com sucesso ! ";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+            $conn->close();
+            ?>
+        </center>
     </body>
-    
-    
-    
+
 </html>
