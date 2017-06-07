@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><center>
+<html>
     <head>
         <title>MARCAS</title>
         <meta charset="utf-8">
@@ -8,7 +8,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
+    
     <body>
+           
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
+        
+        <center>
         <form action="editarMarca.php" method="post">
         <div>
             <table style=" width:300px" class="table table-hover">
@@ -25,8 +32,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
-
 
                     <?php
                     include 'conn.php';
@@ -71,6 +76,7 @@
             </table>
         </div>
         </form>
-    </body>
+      
     </center>
+    </body>
 </html>

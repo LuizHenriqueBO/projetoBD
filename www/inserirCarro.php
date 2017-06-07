@@ -12,6 +12,11 @@
 
     </head>
     <body>
+        
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
+        
     <CENTER>
         <?php
         include 'conn.php';
@@ -25,8 +30,10 @@
         $sql = "INSERT INTO `banco_utfpr`.`carro` (`chassi`, `ano`, `descricaoCarro`, `modelo_idmodelo`,`marca_idmarca`) VALUES ('". $_POST["chassi"]."', '".$_POST["ano"]."', '".$_POST["descricao"]."', '".$_POST["modelo"]."','".$_POST["marca"]."');";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Gravação de Modelo Realizada com sucesso ! ";
+            echo '<br><br><br>';
+            echo "OPERAÇÃO REALIZADA COM SUCESSO !";
         } else {
+            echo '<br><br><br>';
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
@@ -34,8 +41,8 @@
         ?>
 
 
-
-        <br><a href="index.html" class="btn btn-success" role="button">MENU PRINCIPAL</a>
+        <br><br><br>
+        <a href="visualizarCarro.php" class="btn btn-success" role="button">VOLTAR</a>
     </center>
 </body>
 

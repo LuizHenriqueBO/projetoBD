@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html><center>
+<html>
     <head>
-        <title>ENDERECO</title>
-        <meta charset="utf-8">
+        <title>ENDEREÇO</title>
+        <meta charset="utf-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
+        
+        <center>
         <form action="editarEndereco.php" method="post">
         <div>
             <table style=" width:800px" class="table table-hover">
@@ -38,7 +43,7 @@
                     
                     echo "<a href='index.html' class='btn btn-success' role='button'>"."VOLTAR"."</a>";
                     
-                    echo "<a href='inserirEndereco.php' class='btn btn-success' role='button'>"."INSERIR CIDADE"."</a>";
+                    echo "<a href='inserirEndereco.php' class='btn btn-success' role='button'>"."INSERIR ENDEREÇO"."</a>";
                     
                     echo '<br><br><br>';
                     
@@ -58,12 +63,10 @@
                       
                       
                             <td>
-                            
                             <a name='test' href= 'editarEndereco.php?idendereco=".$row["idendereco"]."'><img src='../img/edit.png'></a>
                             </td>    
-
-                             <td>
                             
+                            <td>
                             <a name='test' href= 'deletarEndereco.php?idendereco=".$row["idendereco"]."'><img src='../img/delete.png'></a>
                             </td>  
                             

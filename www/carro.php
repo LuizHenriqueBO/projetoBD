@@ -6,7 +6,7 @@ include 'conn.php';
 
 <html>
     <head>
-        <title> INSERIR MODELO </title>
+        <title>INSERIR CARRO</title>
         
         
         <meta charset="utf-8">
@@ -18,6 +18,9 @@ include 'conn.php';
 
     </head>
     <body>
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
         <center>
             <h3>INSERIR CARRO</h3><br>
         <form action="inserirCarro.php" method="post">

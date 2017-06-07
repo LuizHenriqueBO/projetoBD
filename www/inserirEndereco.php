@@ -5,10 +5,10 @@ include 'conn.php';
 ?>
 
 <html>
-    <center>
+    
 
     <head>
-        <title> INSERIR ENDERECO </title>
+        <title> INSERIR ENDEREÇO </title>
         
         
         <meta charset="utf-8">
@@ -21,22 +21,29 @@ include 'conn.php';
 
     </head>
     <body>
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
+        
+        <center>
+            <h3>INSERIR ENDEREÇO</h3><br>
+            
         <form action="inserirEndereco2.php" method="post">
             
             RUA:<br>
-            <input type="text" name="rua"><br>
+            <input type="text" name="rua"><br><br>
             
             NUMERO:<br>
-            <input type="text" name="numresid"><br>
+            <input type="text" name="numresid"><br><br>
             
             CEP:<br>
-            <input type="text" name="cep"><br>
+            <input type="text" name="cep"><br><br>
             
             COMPLEMENTO:<br>
-            <input type="text" name="complemento"><br>
+            <input type="text" name="complemento"><br><br><br>
            
             
-            CIDADE:<br>
+            CIDADE:
             <select name="idcidade">
 
 
@@ -57,13 +64,12 @@ include 'conn.php';
 
             </select>
             
-            <br><br><a href="visualizarCarro.php" class="btn btn-success" role="button">VOLTAR</a>
+            <br><br><br>
+            <a href="visualizarEndereco.php" class="btn btn-success" role="button">VOLTAR</a>
+            
             
             <input type="submit">
         </form>
+        </center>
     </body>
-
-
-
-    </center>
 </html>

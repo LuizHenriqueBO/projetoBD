@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><center>
+<html>
     <head>
         <title>CIDADE</title>
         <meta charset="utf-8">
@@ -9,6 +9,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <style>
+            @import url('../comandocss/fundo.css');
+        </style>
+        
+        <center>
         <form action="editarCidade.php" method="post">
         <div>
             <table style=" width:500px" class="table table-hover">
