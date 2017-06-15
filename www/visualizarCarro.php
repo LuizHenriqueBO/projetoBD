@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html><center>
+<html>
     <head>
         <title>CARROS</title>
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src="jQuery/jquery-3.2.1.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        
     </head>
     <body>
-        
+    
         <style>
             @import url('../comandocss/fundo.css');
+            div{
+                background-color: white;
+                width: 850px;
+                height: 20%;
+                /*padding-left: 10px;
+                padding-right: 10px;*/
+
+            }
         </style>
+        <center>
         
         
         <form action="editarCarro.php" method="post">
-        <div>
+        
+            <h2> TODOS OS CARROS</h2><br>
+                    
+            <a href='index.html' class='btn btn-success' role='button'>VOLTAR</a>
+                    
+            <a href='carro.php' class='btn btn-success' role='button'>INSERIR CARRO</a>
+            
+            <br><br><br>
+                    
+            
+            <div>
             <table style=" width:800px" class="table table-hover">
                 <thead>
                     <tr>
@@ -37,20 +57,11 @@
                 </thead>
                 <tbody>
 
-
-
                     <?php
                     include 'conn.php';
 
-                    echo "<h2>" . "TODOS OS CARROS" . "</h2>" . "<br>";
                     
-                    echo "<a href='index.html' class='btn btn-success' role='button'>"."VOLTAR"."</a>";
-                    
-                    echo "<a href='carro.php' class='btn btn-success' role='button'>"."INSERIR CARRO"."</a>";
-                    
-                    echo '<br><br><br>';
-                    
-                    $sql = "SELECT chassi,descricaoCarro,ano, descricaoModelo,nomeMarca FROM carro , modelo ,marca where modelo_idmodelo = idmodelo and marca_idmarca = idmarca;";
+                    $sql = "select chassi, descricaoCarro, ano, descricaoModelo,nomeMarca from carro, marca, modelo where modelo_idmodelo = idmodelo and marca_idmarca = idmarca;";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
@@ -85,6 +96,6 @@
             </table>
         </div>
         </form>
-    </body>
     </center>
+    </body>
 </html>

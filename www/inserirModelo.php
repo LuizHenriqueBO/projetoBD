@@ -1,41 +1,60 @@
+
+<?php
+include 'conn.php';
+?>
+
 <html>
+    
     <head>
         <title> INSERIR MODELO </title>
-
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src="jQuery/jquery-3.2.1.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        
     </head>
-
     <body>
-        <style>
+         <style>
             @import url('../comandocss/fundo.css');
         </style>
         
         <center>
-            <?php
-            include 'conn.php';
+        <h3>INSERIR MODELO</h3><br>
+        
+        <form action="inserirModelo2.php" method="post">
+            MODELO:<br>
+            <input type="text" name="descricaoModelo"><br><br><br>
+            MARCA:
+            <select name="nomeMarca">
 
-            $_POST["nomeModelo"];
 
-            $sql = "INSERT INTO `banco_utfpr`.`modelo` (`descricaoModelo`) VALUES ('" . $_POST["nomeModelo"] . "');";
+                <?php
+                $sql = "SELECT * FROM banco_utfpr.marca;";
+                $result = $conn->query($sql);
 
-            if ($conn->query($sql) === TRUE) {
-                echo '<br><br><br>';
-                echo "OPERAÇÃO REALIZADA COM SUCESSO !";
-            } else {
-                echo '<br><br><br>';
-                echo "ERRO NA OPERAÇÃO: " . $sql . "<br>" . $conn->error;
-            }
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["idmarca"] . "'>" . $row["nomeMarca"] . "</option>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+                ?>
 
-            $conn->close();
-            ?>
+            </select>
             
             <br><br><br>
-            <br><a href="visualizarModelo.php" class="btn btn-success" role="button">VOLTAR</a>
+            <a href="visualizarModelo.php" class="btn btn-success" role="button">VOLTAR</a>
+            <input type="submit">
+        </form>
         </center>
     </body>
+
+
+
+    
 </html>

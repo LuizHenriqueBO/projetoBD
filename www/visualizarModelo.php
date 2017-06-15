@@ -2,11 +2,13 @@
 <html>
     <head>
         <title>MODELOS</title>
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src="jQuery/jquery-3.2.1.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>    
+        
     </head>
     <body>
         <style>
@@ -22,6 +24,7 @@
                         
                         <th>ID</th>
                         <th>MODELO</th>
+                        <th>MARCA</th>
                         
                         <th>EDITAR</th>
                         
@@ -40,11 +43,11 @@
                     
                     echo "<a href='index.html' class='btn btn-success' role='button'>"."VOLTAR"."</a>";
                     
-                    echo "<a href='inserirModelo.html' class='btn btn-success' role='button'>"."INSERIR MODELO"."</a>";
+                    echo "<a href='inserirModelo.php' class='btn btn-success' role='button'>"."INSERIR MODELO"."</a>";
                     
                     echo '<br><br><br>';
                     
-                    $sql = "SELECT * FROM modelo";
+                    $sql = "SELECT idmodelo,descricaoModelo,nomeMarca FROM modelo, marca where marca_idmarca = idmarca order by nomeMarca;";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
@@ -53,7 +56,7 @@
                             echo "<tr>
                             <td>" . $row["idmodelo"] . "</td>
                             <td>" . $row["descricaoModelo"] . "</td>	
-                                
+                            <td>" . $row["nomeMarca"] . "</td>    
                             <td>
                             
                             <a name='test' href= 'editarModelo.php?idmodelo=".$row["idmodelo"]."'><img src='../img/edit.png'></a>
