@@ -1,0 +1,9 @@
+
+body {
+    background: url('../img/fundo.jpg');
+    height: 100%; 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
+}
