@@ -14,10 +14,11 @@
     
         <style>
             @import url('../comandocss/fundo.css');
-            div{
+            
+            #tabelas{
                 background-color: white;
-                width: 850px;
-                height: 20%;
+                width: 100%;
+                height: 100%;
                 /*padding-left: 10px;
                 padding-right: 10px;*/
 
@@ -28,17 +29,19 @@
         
         <form action="editarCarro.php" method="post">
         
-            <h2> TODOS OS CARROS</h2><br>
+            <h3> TODOS OS CARROS</h3>
+            <br>
                     
-            <a href='index.html' class='btn btn-success' role='button'>VOLTAR</a>
+            <a href="index.html" class="btn btn-success btn-sm" role="button">VOLTAR</a>
                     
-            <a href='carro.php' class='btn btn-success' role='button'>INSERIR CARRO</a>
+            <a href="inserirCarro.php" class="btn btn-primary btn-sm" role="button">INSERIR CARRO</a>
             
             <br><br><br>
                     
             
-            <div>
-            <table style=" width:800px" class="table table-hover">
+            <div >
+            
+            <table style=" width:800px" class="table table-hover" id="tabelas">
                 <thead>
                     <tr>
                         
@@ -61,7 +64,7 @@
                     include 'conn.php';
 
                     
-                    $sql = "select chassi, descricaoCarro, ano, descricaoModelo,nomeMarca from carro, marca, modelo where modelo_idmodelo = idmodelo and marca_idmarca = idmarca;";
+                    $sql = "select chassi, descricaoCarro, ano, descricaoModelo,nomeMarca from carro, marca, modelo where modelo_idmodelo = idmodelo and marca_idmarca = idmarca order by nomeMarca;";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {

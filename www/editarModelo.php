@@ -16,6 +16,7 @@
         
         <center>
             <h3>EDITAR MODELO</h3>
+            <br>
             <form action="editarModelo2.php" method="post">
             
             ID:<br>
@@ -25,15 +26,13 @@
             <br><br>
 
             MODELO:<br>
-            <input type="text" name="descricaoModelo"><br><br>
+            <input type="text" name="descricaoModelo"><br>
             <br><br><br>
-            <br><a href="visualizarModelo.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <br><a href="visualizarModelo.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            
+            <input type="submit" value="ENVIAR" class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>
     
-
-
-
 </html>

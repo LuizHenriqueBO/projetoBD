@@ -36,7 +36,7 @@
             ?>
             
             <br><br><br>
-            <a href="visualizarEstado.php" class="btn btn-success" role="button">VOLTAR</a>
+            <a href="visualizarEstado.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
 
          </center>
     </body>

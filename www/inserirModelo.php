@@ -21,7 +21,8 @@ include 'conn.php';
         </style>
         
         <center>
-        <h3>INSERIR MODELO</h3><br>
+        <h3>INSERIR MODELO</h3>
+        <br>
         
         <form action="inserirModelo2.php" method="post">
             MODELO:<br>
@@ -48,8 +49,11 @@ include 'conn.php';
             </select>
             
             <br><br><br>
-            <a href="visualizarModelo.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            
+
+            <a href="visualizarModelo.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
         </form>
         </center>
     </body>

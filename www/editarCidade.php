@@ -17,6 +17,7 @@
         
         <center>
             <h3>EDITAR CIDADE</h3>
+            <br>
             <form action="editarCidade2.php" method="post">
             
             ID:<br>
@@ -27,8 +28,8 @@
             NOME:<br>
             <input type="text" name="descricao"><br>
             <br><br><br>
-            <a href="visualizarCidade.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <a href="visualizarCidade.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>

@@ -17,6 +17,7 @@
         
         <center>
             <h3>EDITAR MARCA</h3>
+            <br>
         <form action="editarMarca2.php" method="post">
             
             ID:<br>
@@ -31,9 +32,9 @@
             <input type="text" name="nomeMarca"><br>
             
              <br><br><br>
-             <a href="visualizarMarca.php" class="btn btn-success" role="button">VOLTAR</a>
+             <a href="visualizarMarca.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
              
-            <input type="submit">
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>

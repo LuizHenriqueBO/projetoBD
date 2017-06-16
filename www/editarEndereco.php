@@ -14,7 +14,8 @@
         </style>
         
         <center>
-            <h3>EDITAR ENDERECO</h3>
+            <h3>EDITAR ENDEREÇO</h3>
+            <br>
             <form action="editarEndereco2.php" method="post">
             
              ID:<br>
@@ -35,8 +36,8 @@
             <input type="text" name="complemento"><br>
             
             <br><br>
-            <a href="visualizarEndereco.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <a href="visualizarEndereco.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>

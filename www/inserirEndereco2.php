@@ -25,11 +25,11 @@
                  $_POST["numresid"]. "<br>";
                  $_POST["cep"]. "<br>";
                  $_POST["complemento"]. "<br>";
-                 $_POST["idcidade"];
+                 $_POST["cidade"];
 
 
 
-                $sql = "INSERT INTO `banco_utfpr`.`endereco` (`rua`, `numresid`, `cep`, `complemento`, `cidade_idcidade`) VALUES ('" . $_POST["rua"] . "', '" . $_POST["numresid"] . "', '" . $_POST["cep"] . "', '" . $_POST["complemento"] . "', '" . $_POST["idcidade"] . "');";
+                $sql = "INSERT INTO `banco_utfpr`.`endereco` (`rua`, `numresid`, `cep`, `complemento`, `cidade_idcidade`) VALUES ('" . $_POST["rua"] . "', '" . $_POST["numresid"] . "', '" . $_POST["cep"] . "', '" . $_POST["complemento"] . "', '" . $_POST["cidade"] . "');";
 
                 if ($conn->query($sql) === TRUE) {
                     echo '<br><br><br>';
@@ -41,7 +41,7 @@
                 $conn->close();
             ?>
             <br><br><br>
-            <a href="visualizarEndereco.php" class="btn btn-success" role="button">VOLTAR</a>
+            <a href="visualizarEndereco.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
         </center>
     </body>
 </html>

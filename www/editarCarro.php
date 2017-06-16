@@ -16,6 +16,7 @@
         
         <center>
             <h3>EDITAR CARRO</h3>
+            <br>
             <form action="editarCarro2.php" method="post">
             
             CHASSI:<br>
@@ -27,8 +28,8 @@
             CARRO:<br>
             <input type="text" name="descricaoCarro"><br>
             <br><br><br>
-            <a href="visualizarCarro.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <a href="visualizarCarro.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>

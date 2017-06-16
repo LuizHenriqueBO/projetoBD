@@ -1,7 +1,12 @@
+
+<?php
+include 'conn.php';
+?>
+
+
 <html>
     <head>
-        <title> INSERIR CARRO </title>
-
+        <title>INSERIR CARRO</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,40 +14,77 @@
         <script src="jQuery/jquery-3.2.1.min.js"></script>
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
+        <script language="javascript" type="text/javascript" src="js/arquivo_ajax_Modelo.js"></script>
+
     </head>
     <body>
-        
         <style>
             @import url('../comandocss/fundo.css');
         </style>
+    <center>
         
-    <CENTER>
-        <?php
-        include 'conn.php';
+        <h3>INSERIR CARRO</h3>
+        <br>
+        
+        <form action="inserirCarro2.php" method="post">
 
-        $_POST["chassi"];
-        $_POST["ano"];
-        $_POST["descricao"];
-        $_POST["modelo"];
-        $_POST["marca"];
+            CHASSI:<br>
+            <input type="text" name="chassi"><br><br>
 
-        $sql = "INSERT INTO `banco_utfpr`.`carro` (`chassi`, `ano`, `descricaoCarro`, `modelo_idmodelo`,`marca_idmarca`) VALUES ('". $_POST["chassi"]."', '".$_POST["ano"]."', '".$_POST["descricao"]."', '".$_POST["modelo"]."','".$_POST["marca"]."');";
+            ANO:<br>
+            <input type="text" name="ano"><br><br>
 
-        if ($conn->query($sql) === TRUE) {
-            echo '<br><br><br>';
-            echo "OPERAÇÃO REALIZADA COM SUCESSO !";
-        } else {
-            echo '<br><br><br>';
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-
-        $conn->close();
-        ?>
+            NOME:<br>
+            <input type="text" name="descricao"><br><br><br>
 
 
-        <br><br><br>
-        <a href="visualizarCarro.php" class="btn btn-success" role="button">VOLTAR</a>
+            MARCA:
+            <select name="marca" onchange="javascript:mudar(this.value);">
+
+                <option> SELECIONE UMA MARCA</option>
+                <?php
+                $sql = "SELECT * FROM banco_utfpr.marca;";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["idmarca"] . "'>" . $row["nomeMarca"] . "</option>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+
+
+            </select>
+
+            <a href="inserirMarca.html" class="btn btn-danger btn-xs" role="button">...</a>
+            <br><br><br>
+
+            <!--MODELO:-->
+
+            <div id="mostraCombo">
+
+                <select name="modelo">
+                    <option>SELECIONE UMA MARCA PRIMEIRO</option>
+                </select>
+
+            </div>
+
+
+            <br><br><br>
+
+            <a href="visualizarCarro.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
+
+
+        </form>
     </center>
+    <?php
+    $conn->close();
+    ?>
 </body>
 
 </html>

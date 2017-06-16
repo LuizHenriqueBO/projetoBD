@@ -20,7 +20,8 @@ include 'conn.php';
         </style>
         
         <center>
-        <h3>INSERIR CIDADE</h3><br>
+        <h3>INSERIR CIDADE</h3>
+        <br>
         
         <form action="inserirCidade2.php" method="post">
             CIDADE:<br>
@@ -47,8 +48,8 @@ include 'conn.php';
             </select>
             
             <br><br><br>
-            <a href="visualizarCidade.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <a href="visualizarCidade.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
         </form>
         </center>
     </body>

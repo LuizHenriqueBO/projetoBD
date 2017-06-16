@@ -7,3 +7,12 @@ body {
     background-size: 100%;
   
 }
+
+                     #tabelas{
+                background-color: white;
+                width: 300px;
+                height: 20%;
+                /*padding-left: 10px;
+                padding-right: 10px;*/
+
+            }

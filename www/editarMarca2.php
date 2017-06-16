@@ -39,7 +39,7 @@
             ?>
 
             <br><br><br>
-             <a href="visualizarMarca.php" class="btn btn-success" role="button">VOLTAR</a>
+             <a href="visualizarMarca.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
              
         </center>
     </body>

@@ -10,7 +10,6 @@
         
     </head>
     
-    
     <body>
         <style>
             @import url('../comandocss/fundo.css');
@@ -41,7 +40,7 @@
             ?>
             
             <br><br><br>
-            <a href="visualizarCarro.php" class="btn btn-success" role="button">VOLTAR</a>
+            <a href="visualizarCarro.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
          </center>
     </body>
 </html>

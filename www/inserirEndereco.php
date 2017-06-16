@@ -16,6 +16,7 @@ include 'conn.php';
         <script src="jQuery/jquery-3.2.1.min.js"></script>
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         
+        <script language="javascript" type="text/javascript" src="js/arquivo_ajax_Cidade.js"></script>
 
     </head>
     <body>
@@ -24,7 +25,8 @@ include 'conn.php';
         </style>
         
         <center>
-            <h3>INSERIR ENDEREÇO</h3><br>
+            <h3>INSERIR ENDEREÇO</h3>
+            <br>
             
         <form action="inserirEndereco2.php" method="post">
             
@@ -41,32 +43,47 @@ include 'conn.php';
             <input type="text" name="complemento"><br><br><br>
            
             
-            CIDADE:
-            <select name="idcidade">
+            
+            
+            ESTADO:
+            <select name="estado" onchange="javascript:mudar(this.value);">
 
-
+                <option> SELECIONE UM ESTADO</option>
                 <?php
-                $sql = "SELECT * FROM banco_utfpr.cidade;";
+                $sql = "SELECT * FROM banco_utfpr.estado;";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while ($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row["idcidade"] . "'>" . $row["descricao"] . "</option>";
+                        echo "<option value='" . $row["uf"] . "'>" . $row["nome"] . "</option>";
                     }
                 } else {
                     echo "0 results";
                 }
-                $conn->close();
                 ?>
+            
+             </select>
 
-            </select>
+            <a href="inserirEstado.html" class="btn btn-danger btn-xs" role="button">...</a>
             
             <br><br><br>
-            <a href="visualizarEndereco.php" class="btn btn-success" role="button">VOLTAR</a>
+
+            <!--CIDADE:-->
+
+            <div id="mostraCombo">
+
+                <select name="cidade">
+                    <option>SELECIONE UM ESTADO PRIMEIRO</option>
+                </select>
+
+            </div>
+            
+            <br><br><br>
+            <a href="visualizarEndereco.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
             
             
-            <input type="submit">
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
         </form>
         </center>
     </body>

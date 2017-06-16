@@ -16,6 +16,7 @@
         
         <center>
             <h3>EDITAR ESTADO</h3>
+            <br>
             <form action="editarEstado2.php" method="post">
             
             UF:<br>
@@ -26,8 +27,8 @@
             ESTADO:<br>
             <input type="text" name="nome"><br>
             <br><br><br>
-            <a href="visualizarEstado.php" class="btn btn-success" role="button">VOLTAR</a>
-            <input type="submit">
+            <a href="visualizarEstado.php" class="btn btn-success btn-sm" role="button">VOLTAR</a>
+            <input type="submit" value="ENVIAR " class="btn btn-primary btn-sm">
           </form>
         </center>
     </body>
