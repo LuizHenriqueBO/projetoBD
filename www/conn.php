@@ -12,7 +12,7 @@ $password = "";
 
 $dbname = "banco_utfpr";
 
-header('content-Type: text/html; charset=utf-8');
+/*header('content-Type: text/html; charset=utf-8');*/
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
