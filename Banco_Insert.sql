@@ -55,7 +55,7 @@ INSERT INTO `banco_utfpr`.`cliente` (`fisica_pessoa_idpessoa`) VALUES ('3');
 INSERT INTO `banco_utfpr`.`cliente` (`fisica_pessoa_idpessoa`) VALUES ('5');
 
 
-INSERT INTO `banco_utfpr`.`fornecedor` (`cnpj`, `razaosocial`, `nomefantasia`, `inscricaoestadual`, `pessoa_idpessoa`) VALUES ('5155212', 'Rivel Fiet LTDA', 'Rivel', '545421', '6');
+INSERT INTO `banco_utfpr`.`fornecedor` (`cnpj`, `razaosocial`, `nomefantasia`, `inscricaoestadual`, `pessoa_idpessoa`) VALUES ('5155212', 'Fipal Fiat LTDA', '	Fiat', '545421', '6');
 INSERT INTO `banco_utfpr`.`fornecedor` (`cnpj`, `razaosocial`, `nomefantasia`, `inscricaoestadual`, `pessoa_idpessoa`) VALUES ('6005141', ' New Car & CIA LTDA', 'New Car', '362155', '7');
 INSERT INTO `banco_utfpr`.`fornecedor` (`cnpj`, `razaosocial`, `nomefantasia`, `inscricaoestadual`, `pessoa_idpessoa`) VALUES ('9422121', 'Fancar Ford LTDA', 'Fancar', '621518', '8');
 
