@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `banco_utfpr`.`fornecedor` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `banco_utfpr`.`funcionario` (
   `funcao` VARCHAR(45) NULL DEFAULT NULL,
-  `salario` FLOAT NULL DEFAULT NULL,
+  `salario` decimal(10,2) NULL DEFAULT NULL,
   `fisica_pessoa_idpessoa` INT NOT NULL,
   PRIMARY KEY (`fisica_pessoa_idpessoa`),
   CONSTRAINT `fk_funcionario_fisica1`
@@ -167,8 +167,8 @@ CREATE TABLE IF NOT EXISTS `banco_utfpr`.`compra` (
   `idcompra` INT(11) NOT NULL AUTO_INCREMENT,
   `carro_chassi` INT(11) NOT NULL,
   `datacompra` DATE NOT NULL,
-  `valorcompra` FLOAT NOT NULL,
-  `valorUnit` FLOAT NOT NULL,
+  `valorcompra` decimal(10,2) NOT NULL,
+  `valorUnit` decimal(10,2) NOT NULL,
   `fornecedor_pessoa_idpessoa` INT NOT NULL,
   `funcionario_fisica_pessoa_idpessoa` INT NOT NULL,
   PRIMARY KEY (`idcompra`, `carro_chassi`),
@@ -194,8 +194,8 @@ CREATE TABLE IF NOT EXISTS `banco_utfpr`.`venda` (
   `idvenda` INT(11) NOT NULL AUTO_INCREMENT,
   `carro_chassi` INT(11) NOT NULL,
   `datavenda` DATE NOT NULL,
-  `valorvenda` FLOAT NOT NULL,
-  `valorUnit` FLOAT NOT NULL,
+  `valorvenda` decimal(10,2) NOT NULL,
+  `valorUnit` decimal(10,2) NOT NULL,
   `cliente_fisica_pessoa_idpessoa` INT NOT NULL,
   `funcionario_fisica_pessoa_idpessoa` INT NOT NULL,
   PRIMARY KEY (`idvenda`, `carro_chassi`),
