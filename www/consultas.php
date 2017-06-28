@@ -61,7 +61,7 @@
 
             <a data-toggle="modal" class="list-group-item "data-target="#myModal7" align="center" >RAZÃO SOCIAL DO FORNECEDOR QUE FORNECERAM CARRO DA MARCA FORD</a>
 
-            <a data-toggle="modal" class="list-group-item "data-target="#myModal8" align="center" >NOME DO CLIENTE QUE COMPROU CARRO QUE FOI FORNECEIDO PELA FIPAL FIAT LTDA</a>
+            <a data-toggle="modal" class="list-group-item "data-target="#myModal8" align="center" >NOME DOS CARROS E DOS CLIENTE QUE COMPROU CARRO QUE FOI FORNECEIDO PELA Ford & CIA LTDA</a>
 
             <a data-toggle="modal" class="list-group-item "data-target="#myModal9" align="center" >ENDEREÇO DO CLIENTE QUE COMPROU O CARRO FOCUS</a>
 
@@ -104,7 +104,7 @@
 
 
 
-                                    $sql = "select t.ddd, t.numero, f.nome from telefone t, pessoa p, fisica f, venda v where t.pessoa_idpessoa = p.idpessoa and f.pessoa_idpessoa = p.idpessoa and v.cliente_fisica_pessoa_idpessoa = f.pessoa_idpessoa and v.carro_chassi in (select c.chassi from carro c, marca m, modelo mo where c.modelo_idmodelo = mo.idmodelo and mo.marca_idmarca = m.idmarca and m.nomeMarca = 'ford');";
+                                    $sql = "select distinct t.ddd, t.numero, f.nome from telefone t, pessoa p, fisica f, venda v where t.pessoa_idpessoa = p.idpessoa and f.pessoa_idpessoa = p.idpessoa and v.cliente_fisica_pessoa_idpessoa = f.pessoa_idpessoa and v.carro_chassi in (select c.chassi from carro c, marca m, modelo mo where c.modelo_idmodelo = mo.idmodelo and mo.marca_idmarca = m.idmarca and m.nomeMarca = 'ford');";
 
 
                                     $result = $conn->query($sql);
@@ -154,7 +154,7 @@
                         <div class="modal-body">
 
 
-                            <table style=" width:500px" class="table table-hover" id="tabelas">
+                            <table style=" width:550px" class="table table-hover" id="tabelas">
                                 <thead>
                                     <tr>
 
@@ -172,7 +172,7 @@
 
 
 
-                                    $sql = "select  c.descricaoCarro,  f.nome
+                                    $sql = "select c.descricaoCarro,  f.nome
 
                     from carro c, pessoa p, fisica f, cliente cli, venda v
 
@@ -249,7 +249,7 @@
                         <div class="modal-body">
 
 
-                            <table style=" width:500px" class="table table-hover" id="tabelas">
+                            <table style=" width:560px" class="table table-hover" id="tabelas">
                                 <thead>
                                     <tr>
 
@@ -347,7 +347,6 @@
                                     <tr>
 
                                         <th>MARCA</th>
-                                        <th>CHASSI</th>
                                         <th>CARRO</th>
                                         <th>ANO</th>
                                         <th>MODELO</th>
@@ -367,7 +366,7 @@
 
 
 
-                                    $sql = "select ma.nomeMarca, car.chassi, car.descricaoCarro, car.ano, mo.descricaoModelo,  v.valorUnit, v.datavenda
+                                    $sql = "select ma.nomeMarca, car.descricaoCarro, car.ano, mo.descricaoModelo,  v.valorUnit, v.datavenda
 
                    from marca ma, modelo mo, carro car, venda v
 
@@ -395,7 +394,6 @@
                                             echo "<tr>
                                                 
                                                 <td>" . $row["nomeMarca"] . "</td>
-                                                <td>" . $row["chassi"] . "</td>
                                                 <td>" . $row["descricaoCarro"] . "</td>
                                                 <td>" . $row["ano"] . "</td>
                                                 <td>" . $row["descricaoModelo"] . "</td>
@@ -697,7 +695,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h5 class="modal-title">NOME DO CLIENTE QUE COMPROU CARRO QUE FOI FORNECEIDO PELA FIPAL FIAT LTDA</h5>
+                            <h5 class="modal-title">NOME DOS CARROS E DOS CLIENTE QUE COMPROU CARRO QUE FOI FORNECEIDO PELA Ford & CIA LTDA</h5>
                         </div>
                         <div class="modal-body">
 
@@ -706,7 +704,7 @@
                                 <thead>
                                     <tr>
 
-
+                                        <th>ID DA VENDA</th>
                                         <th>NOME CLIENTE</th>
                                         <th>IDADE</th>
                                         <th>CARRO</th>
@@ -724,7 +722,7 @@
 
 
 
-                                    $sql = "select fi.nome, fi.idade, c.descricaoCarro, v.valorUnit
+                                    $sql = "select v.idvenda, fi.nome, fi.idade, c.descricaoCarro, v.valorUnit
 
                     from fisica fi, cliente cli, venda v , carro c, compra com, fornecedor f
 
@@ -737,7 +735,9 @@
 
                     and f.pessoa_idpessoa = com.fornecedor_pessoa_idpessoa
 
-                    and f.razaosocial ='Fipal Fiat LTDA';";
+                    and f.razaosocial ='Ford & CIA LTDA'
+                    
+                    order by v.idvenda;";
 
 
 
@@ -748,7 +748,7 @@
                                         while ($row = $result->fetch_assoc()) {
                                             echo "<tr>
                                                 
-                          
+                                                <td>" . $row["idvenda"] . "</td>
                                                 <td>" . $row["nome"] . "</td>
                                                 <td>" . $row["idade"] . "</td>
                                                 <td>" . $row["descricaoCarro"] . "</td>
@@ -777,11 +777,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
 
 
