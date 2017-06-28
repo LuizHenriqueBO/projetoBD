@@ -8,6 +8,8 @@ include 'conn.php';
     
 
     <head>
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title> INSERIR ENDEREÇO </title>
         
         <meta charset="utf-8">
@@ -20,9 +22,9 @@ include 'conn.php';
 
     </head>
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
             <h3>INSERIR ENDEREÇO</h3>

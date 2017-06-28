@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title>ESTADO</title>
 
 
@@ -14,7 +17,7 @@
     <body>
 
 
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
 
             #tabelas{
@@ -27,7 +30,7 @@
             }            
 
 
-        </style>
+        </style>-->
 
     <center>
         <form action="editarEstado.php" method="post">

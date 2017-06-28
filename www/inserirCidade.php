@@ -5,6 +5,8 @@ include 'conn.php';
 
 <html>
     
+    <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+    
     <head>
         <title> INSERIR CIDADE </title>
         
@@ -15,9 +17,9 @@ include 'conn.php';
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>     
     </head>
     <body>
-         <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
         <h3>INSERIR CIDADE</h3>

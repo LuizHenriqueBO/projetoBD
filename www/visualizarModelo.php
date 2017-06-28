@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title>MODELOS</title>
 
         <meta charset="utf-8">
@@ -11,7 +14,7 @@
 
     </head>
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
 
             #tabelas{
@@ -24,7 +27,7 @@
             }            
 
 
-        </style>
+        </style>-->
 
     <center>
         <form action="editarModelo.php" method="post">

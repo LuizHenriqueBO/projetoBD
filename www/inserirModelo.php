@@ -6,6 +6,9 @@ include 'conn.php';
 <html>
     
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title> INSERIR MODELO </title>
         
         <meta charset="utf-8">
@@ -16,9 +19,9 @@ include 'conn.php';
         
     </head>
     <body>
-         <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
         <h3>INSERIR MODELO</h3>

@@ -2,6 +2,9 @@
 
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title> EDITAR MARCA </title>
         
         <meta charset="utf-8">
@@ -12,9 +15,9 @@
     </head>
     <body>
         
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
 

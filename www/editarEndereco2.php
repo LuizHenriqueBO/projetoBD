@@ -11,9 +11,9 @@
 
     </head>
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         <center>
             <?php
 

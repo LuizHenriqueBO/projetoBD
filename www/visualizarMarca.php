@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title>MARCAS</title>
 
         <meta charset="utf-8">
@@ -13,7 +16,7 @@
 
     <body>
 
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
 
             #tabelas{
@@ -25,7 +28,7 @@
 
             }
 
-        </style>
+        </style>-->
 
     <center>
         <form action="editarMarca.php" method="post">

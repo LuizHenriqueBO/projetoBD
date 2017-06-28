@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title>CIDADE</title>
 
         <meta charset="utf-8">
@@ -11,7 +14,7 @@
 
     </head>
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
 
             #tabelas{
@@ -22,7 +25,7 @@
                 padding-right: 10px;*/
 
             }
-        </style>
+        </style>-->
 
     <center>
         <form action="editarCidade.php" method="post">

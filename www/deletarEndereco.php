@@ -1,5 +1,8 @@
 <html>
      <head>
+         
+         <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+         
         <title>DELETAR ENDEREÇO</title>
         
          <meta charset="utf-8">
@@ -12,9 +15,9 @@
     
     
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         <center>
             <?php
 

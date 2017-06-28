@@ -1,6 +1,9 @@
 
 <html>
     <head>
+        
+        <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+        
         <title> EDITAR ESTADO </title>
         
         <meta charset="utf-8">
@@ -10,9 +13,9 @@
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
             <h3>EDITAR ESTADO</h3>

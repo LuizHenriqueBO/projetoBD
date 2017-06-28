@@ -1,6 +1,9 @@
 
 <html>
      <head>
+         
+         <link rel="stylesheet" type="text/css" href="../comandocss/fundo.css">
+         
         <title>DELETAR ESTADO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +16,9 @@
     
     <body>
         
-        <style>
+        <!--<style>
             @import url('../comandocss/fundo.css');
-        </style>
+        </style>-->
         
         <center>
             <?php
